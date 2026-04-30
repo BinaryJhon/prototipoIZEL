@@ -24,3 +24,22 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes floating-pet {
+  0% {
+    transform: translateY(0px);
+    filter: drop-shadow(0 0 8px rgba(100, 255, 100, 0.5));
+  }
+  50% {
+    transform: translateY(-8px);
+    filter: drop-shadow(0 0 15px rgba(100, 255, 100, 0.9));
+  }
+  100% {
+    transform: translateY(0px);
+    filter: drop-shadow(0 0 8px rgba(100, 255, 100, 0.5));
+  }
+}
+
+.animate-floating-pet {
+  animation: floating-pet 3s ease-in-out infinite;
+}
